@@ -32,12 +32,7 @@ Program to implement the linear regression using gradient descent.
 Developed by:VISMAYA S
 RegisterNumber:  212221230125
 /*
-```
-Program to implement the linear regression using gradient descent.
-
-Developed by: B.PAVIZHI
-RegisterNumber: 212221230077
-
+``
 
 import numpy as np
 import pandas as pd
@@ -72,8 +67,7 @@ plt.title("study hour vs scores")
 plt.plot(loss)
 plt.xlabel("iteration")
 plt.ylabel("loss")
-    ```
-
+```
 ## Output:
 ![output](OP03.png)
 ![output](output2.png)
