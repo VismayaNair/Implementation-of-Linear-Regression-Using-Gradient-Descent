@@ -31,46 +31,52 @@ Plot the graph respect to hours and scores using scatter plot function.
 Program to implement the linear regression using gradient descent.
 Developed by:VISMAYA S
 RegisterNumber:  212221230125
+/*
+```
+Program to implement the linear regression using gradient descent.
+
+Developed by: B.PAVIZHI
+RegisterNumber: 212221230077
+
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-data = pd.read_csv("student_scores.csv")
+data=pd.read_csv("/content/student_scores - student_scores.csv")
 data.head()
 data.isnull().sum()
-x = data.Hours
+x=data.Hours
 x.head()
-y = data.Scores
+y=data.Scores
 y.head()
-n = len(x)
-m = 0
-c = 0
-L = 0.001
-loss = []
+n=len(x)
+m=0
+c=0
+l=0.001
+loss=[]
 for i in range(10000):
-    ypred = m*x + c
-    MSE = (1/n) * sum((ypred - y)*2)
-    dm = (2/n) * sum(x*(ypred-y))
-    dc = (2/n) * sum(ypred-y)
-    c = c-L*dc
-    m = m-L*dm
+    ypred=m*x+c
+    MSE=(1/n)*sum((ypred-y)*2)
+    dm=(2/n)*sum(x*(ypred-y))
+    dc=(2/n)*sum(ypred-y)
+    c=c-l*dc
+    m=m-l*dm
     loss.append(MSE)
-    #print(m)
-print(m,c)
-y_pred = m*x + c
-plt.scatter(x,y,color = "pink")
-plt.plot(x,y_pred)
-plt.xlabel("Study hours")
-plt.ylabel("Scores")
-plt.title("Study hours vs. Scores")
+    #print(m,c)
+    ypred=m*x+c
+plt.scatter(x,y,color="blue")
+plt.plot(x,ypred)
+plt.xlabel("study hours")
+plt.ylabel("scores")
+plt.title("study hour vs scores")
 plt.plot(loss)
-plt.xlabel("Iterations")
+plt.xlabel("iteration")
 plt.ylabel("loss")
-```
+    ```
 
 ## Output:
-![output](./output1.png)
-![output](./output2.png)
+![output](OP03.png)
+![output](output2.png)
 
 
 ## Result:
